@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-light {
+  background-color: white;
+  color: black;
+  --color-primary: #f8f8f8;
+  --color-secondary: #e5e7eb;
+  --color-text: #555;
+  --color-text-secondary: #131313;
+  --color-accent: #009ffd;
+}
+
+.theme-dark {
+  --color-primary: #333;
+  --color-secondary: #4d4d4d;
+  --color-text: #e6e6e6;
+  --color-text-secondary: #b8b8b9;
+  --color-accent: #fc7753;
+  background-color: black;
+  color: white;
+}
+
+pre {
+  white-space: break-spaces;
+  overflow: auto;
+}
+
+.theme-light section {
+  background: #f8f8f8;
+}
+
+.theme-light pre {
+  background: white;
+}
+
+.theme-dark pre {
+  background: #000;
+}
+
+.theme-dark section {
+  background: rgb(15 23 42);
+}
+
+.theme-light .menu-item:hover,
+.theme-light .menu-item.active {
+  background: #f8f8f8;
+}
+
+.theme-dark .menu-item:hover,
+.theme-dark .menu-item.active {
+  background-color: rgb(22 101 52);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
