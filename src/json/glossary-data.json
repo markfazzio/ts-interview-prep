@@ -1,1 +1,6 @@
-[]
+[
+  {
+    "term": "Primitives",
+    "definition": "The 3 main primitive value types are string, number, and boolean"
+  }
+]

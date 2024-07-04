@@ -11,6 +11,7 @@ export const useScrollSpy = (ids: string[], offset: number = 0) => {
       const position = ids
         .map((id) => {
           const element = document.getElementById(id);
+          console.log(id);
 
           if (!element) return { id, top: -1, bottom: -1 };
 

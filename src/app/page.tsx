@@ -8,6 +8,9 @@ import { ThemeContext, ThemeContextType } from "@/context/ThemeContext";
 import { GlossarySection } from "@/sections/Glossary";
 import SwitchTheme from "@/components/SwitchTheme";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import { TypesSection } from "@/sections/Types";
+import { ArraysSection } from "@/sections/Arrays";
+import { getSectionIdsArray } from "@/utils/section-utils";
 
 export default function Home() {
   const { theme, setTheme } = useContext(ThemeContext) as ThemeContextType;
@@ -16,7 +19,7 @@ export default function Home() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  const ids = ["glossary"];
+  const ids = getSectionIdsArray();
   const activeId = useScrollSpy(ids, 54); //
 
   return (
@@ -32,6 +35,8 @@ export default function Home() {
         />
         <PageHeader />
         {/* sections */}
+        <TypesSection />
+        <ArraysSection />
         <GlossarySection />
       </main>
     </div>
