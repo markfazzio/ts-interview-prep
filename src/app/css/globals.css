@@ -8,7 +8,6 @@ html {
 
 .theme-light {
   background-color: white;
-  color: black;
   --color-primary: #f8f8f8;
   --color-secondary: #e5e7eb;
   --color-text: #555;
@@ -23,7 +22,18 @@ html {
   --color-text-secondary: #b8b8b9;
   --color-accent: #fc7753;
   background-color: black;
-  color: white;
+}
+
+.theme-light,
+.theme-light .btn-close svg {
+  color: black;
+  fill: black;
+}
+
+.theme-dark,
+.theme-dark .btn-close svg {
+  color: #fff;
+  fill: #fff;
 }
 
 pre {

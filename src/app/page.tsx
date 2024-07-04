@@ -11,6 +11,7 @@ import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import { TypesSection } from "@/sections/Types";
 import { ArraysSection } from "@/sections/Arrays";
 import { getSectionIdsArray } from "@/utils/section-utils";
+import { InterfacesSection } from "@/sections/Interfaces";
 
 export default function Home() {
   const { theme, setTheme } = useContext(ThemeContext) as ThemeContextType;
@@ -36,6 +37,7 @@ export default function Home() {
         <PageHeader />
         {/* sections */}
         <TypesSection />
+        <InterfacesSection />
         <ArraysSection />
         <GlossarySection />
       </main>
