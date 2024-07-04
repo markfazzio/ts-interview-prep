@@ -32,15 +32,7 @@ pre {
 }
 
 .theme-light section {
-  background: #f8f8f8;
-}
-
-.theme-light pre {
-  background: white;
-}
-
-.theme-dark pre {
-  background: #000;
+  background: var(--color-primary);
 }
 
 .theme-dark section {

@@ -15,7 +15,7 @@ export const CodeBlock = (props: SyntaxHighlighterProps) => {
 
   return (
     <SyntaxHighlighter
-      language="javascript"
+      language="typescript"
       className="mb-3"
       style={highlighterTheme}
     >

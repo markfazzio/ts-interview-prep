@@ -7,7 +7,7 @@ import ThemeContextProvider from "@/context/ThemeContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TS Interview Prep",
+  title: "TS Interview Prep - By Mark Fazzio",
   description: "Be prepared with this quick refresher",
 };
 
