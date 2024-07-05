@@ -7,17 +7,37 @@ import { SectionSubTitle } from "@/components/SectionSubTitle";
 export const TypesSection = () => (
   <section className="px-5 py-10 mb-3" id="types">
     <SectionContainer>
-      <SectionMainTitle label="Types & Interfaces" />
+      <SectionMainTitle label="Types" />
       <SectionDescription>
-        Interfaces should be used to describe objects - unless needing to
-        specify types outside of the 3 primitives.
+        <strong>
+          Note: Interfaces should be used to describe objects in most cases, but
+          occasionally using types may be needed.
+        </strong>
       </SectionDescription>
+      <SectionSubTitle label="Basic Usage" />
+      <CodeBlock>
+        {`
+  const engineConfig: string = 'I6';
+  const horsepower: number = 320;
+  const isForSale: boolean = false;
+  const salesData: any = null;
+        `}
+      </CodeBlock>
       <SectionSubTitle label="Primitive Types" />
       <CodeBlock>
         {`
   type EngineConfig = string;
   type Horsepower = number;
   type IsForSale = boolean;
+  type SalesData = any; // try to avoid using this as it is loose typing
+  type ListForSaleFn = (price: number) => void;
+        `}
+      </CodeBlock>
+      <SectionSubTitle label="Generic Types" />
+      <CodeBlock>
+        {`
+  type PaintColors = Array<string>;
+  type ModelYears = Array<number>;
         `}
       </CodeBlock>
       <SectionSubTitle label="Common Type Examples" />
@@ -29,11 +49,11 @@ export const TypesSection = () => (
         {`
   type Car {
     engineConfig?: string; // ? = optional, could be EV
-    horsepower: number, // required, all cars have this measurement
-    isForSale?: boolean,
+    horsepower: number; // required, all cars have this measurement
+    isForSale?: boolean;
     listForSale?: (price: number) => void;
     [key: string]: string; // accepts any index
-    readonly isDiscontinued: boolean; // readonly
+    readonly id: string; // readonly
   }
         `}
       </CodeBlock>
@@ -46,43 +66,27 @@ export const TypesSection = () => (
       <SectionSubTitle label="Object Literal Type" />
       <CodeBlock>
         {`
-  type Location = {
-    x: number;
-    y: number;
-  };
-        `}
-      </CodeBlock>
-      <SectionSubTitle label="Function Types" />
-      <CodeBlock>
-        {`
-  type AddFn = (num1: number, num2: number) => number;
-        `}
-      </CodeBlock>
-      <SectionSubTitle label="Declarations" />
-      <CodeBlock>
-        {`
-  interface Car {
-    engineConfig: string;
-    horsepower: number;
-    manufacturer: string;
+  type ManufacturerInfo = {
+    make: string;
     model: string;
-  }
-
-  const modelSupra: Car = {
-    engingConfig: 'I6',
-    horsepower: 320,
-    manufacturer: 'Toyota',
-    model: 'Supra'
-  }
+  };
         `}
       </CodeBlock>
       <SectionSubTitle label="Intersection Types" />
       <SectionDescription>
-        A different way to merge and extend types.
+        Similar to how an interface extends another, this will merge the types.
       </SectionDescription>
       <CodeBlock>
         {`
-  type Location = { x: number } & { y: number }; // { x: number, y: number }
+  type CarWithMakeModel = Car & ManufacturerInfo;
+
+  // Usage
+  const modelSupra: CarWithMakeModel = {
+    engineConfig: 'I6',
+    horsepower: 320,
+    make: 'Toyota',
+    model: 'Supra'
+  }
         `}
       </CodeBlock>
       <SectionSubTitle label="Tuple Types" />
@@ -91,7 +95,7 @@ export const TypesSection = () => (
       </SectionDescription>
       <CodeBlock>
         {`
-  type CarTuple = [manufacturer: string, model: string, horsepower: number, engineConfig: string];
+  type CarTuple = [make: string, model: string, horsepower: number, engineConfig: string];
   const supraModel: CarTuple = ['Toyota', 'Supra', 320, 'I6'];
   const supraModel: CarTuple = ['Toyota', 320, 'Supra', 'I6']; // ERROR
         `}

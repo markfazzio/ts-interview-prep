@@ -12,6 +12,14 @@ export const SECTIONS = [
     value: "arrays",
   },
   {
+    label: "Functions",
+    value: "functions",
+  },
+  {
+    label: "Classes",
+    value: "classes",
+  },
+  {
     label: "Glossary",
     value: "glossary",
   },
