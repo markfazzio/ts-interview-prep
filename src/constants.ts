@@ -16,6 +16,10 @@ export const SECTIONS = [
     value: "functions",
   },
   {
+    label: "Modules",
+    value: "modules",
+  },
+  {
     label: "Classes",
     value: "classes",
   },

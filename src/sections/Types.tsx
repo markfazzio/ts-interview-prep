@@ -30,7 +30,10 @@ export const TypesSection = () => (
   type Horsepower = number;
   type IsForSale = boolean;
   type SalesData = any; // try to avoid using this as it is loose typing
-  type ListForSaleFn = (price: number) => void;
+  type ListForSaleFn = (price: number) => void; // void does not return a value
+  type ThrowSaleError = (msg: string): never { // never represents a function terminating type
+    throw new Error(msg);
+  }
         `}
       </CodeBlock>
       <SectionSubTitle label="Generic Types" />

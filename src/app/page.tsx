@@ -14,6 +14,7 @@ import { getSectionIdsArray } from "@/utils/section-utils";
 import { InterfacesSection } from "@/sections/Interfaces";
 import { ClassesSection } from "@/sections/Classes";
 import { FunctionsSection } from "@/sections/Functions";
+import { ModulesSection } from "@/sections/Modules";
 
 export default function Home() {
   const { theme, setTheme } = useContext(ThemeContext) as ThemeContextType;
@@ -42,6 +43,7 @@ export default function Home() {
         <InterfacesSection />
         <ArraysSection />
         <FunctionsSection />
+        <ModulesSection />
         <ClassesSection />
         <GlossarySection />
       </main>

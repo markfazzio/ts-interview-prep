@@ -20,6 +20,16 @@ export const FunctionsSection = () => (
     return ebayApi.getData(id);
   }
 
+  // Generic
+  function getFirstSale<Sale>(sales: Sale[]) {
+    return sales[0];
+  }
+
+  // Optional Parameters
+  function getCarsData(make?: string, model?: string) {
+    // ...
+  }
+
   // With Union Type
   const listCarsForSaleById = (id: number | string) => {
     if (typeof id === 'number')

@@ -1,5 +1,13 @@
 [
   {
+    "term": "JSX",
+    "definition": "Embeddable XML-like syntax supported by TypeScript to be used directly within TypeScript, as long as the file has a .tsx extension"
+  },
+  {
+    "term": "Modules",
+    "definition": "Any file containing a top-level import or export, executed within their own scope, instead of the global scope"
+  },
+  {
     "term": "Primitives",
     "definition": "The 3 main primitive value types are string, number, and boolean"
   }
