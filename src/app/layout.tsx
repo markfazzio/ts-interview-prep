@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TS Interview Prep - By Mark Fazzio",
-  description: "Be prepared with this quick refresher",
+  description: "Quick TypeScript refresher cheat sheet",
 };
 
 export default function RootLayout({

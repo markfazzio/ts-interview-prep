@@ -8,6 +8,10 @@
     "definition": "Any file containing a top-level import or export, executed within their own scope, instead of the global scope"
   },
   {
+    "term": "Namespaces",
+    "definition": "Refers to internal modules"
+  },
+  {
     "term": "Primitives",
     "definition": "The 3 main primitive value types are string, number, and boolean"
   }
