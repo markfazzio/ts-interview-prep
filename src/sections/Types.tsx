@@ -1,11 +1,14 @@
-import { CodeBlock } from "@/components/CodeBlock";
-import { SectionContainer } from "@/components/SectionContainer";
-import { SectionDescription } from "@/components/SectionDescription";
-import { SectionMainTitle } from "@/components/SectionMainTitle";
-import { SectionSubTitle } from "@/components/SectionSubTitle";
+import {
+  CodeBlock,
+  SectionContainer,
+  SectionDescription,
+  SectionMain,
+  SectionMainTitle,
+  SectionSubTitle,
+} from "@markfazzio/docs-ui-components";
 
 export const TypesSection = () => (
-  <section className="px-5 py-10 mb-3" id="types">
+  <SectionMain id="types">
     <SectionContainer>
       <SectionMainTitle label="Types" />
       <SectionDescription>
@@ -104,5 +107,5 @@ export const TypesSection = () => (
         `}
       </CodeBlock>
     </SectionContainer>
-  </section>
+  </SectionMain>
 );
